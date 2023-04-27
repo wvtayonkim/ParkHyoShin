@@ -1,0 +1,52 @@
+<!DOCTYPE html>ㅌ
+<html>
+<head>
+	<title>What to Eat?</title>
+    <meta charset="utf-8">
+	<style>
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 70vh;
+		}
+		button {
+			padding: 24px 48px;
+			font-size: 40px;
+			margin-bottom: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button onclick="showFood()">뭐 먹을까?</button>
+		<div id="food"></div>
+	</div>
+	<script>
+		function showFood() {
+			const foods = [
+				{ name: "피자"},
+				{ name: "햄버거"},
+				{ name: "타코"},
+                { name: "치킨"},
+				{ name: "라면"},
+                { name: "초밥"},
+                { name: "짜장면"},
+				{ name: "샐러드"},
+				{ name: "파스타"},
+				{ name: "스테이크"},
+                { name: "샌드위치"},
+				{ name: "국밥"},
+				
+			];
+			const randomFood = foods[Math.floor(Math.random() * foods.length)];
+			document.getElementById("food").innerHTML = `<h1>${randomFood.name}</h1>`;
+		}
+	</script>
+</body>
+</html>
